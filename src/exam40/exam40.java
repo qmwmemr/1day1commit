@@ -1,4 +1,4 @@
-package exam30;
+package exam40;
 
 
 import java.io.CharConversionException;
@@ -11,13 +11,12 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class exam39 {
+public class exam40 {
 	
-	//LRU(캐시, 카카오 변형)
+	//중복확인
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		int s = scan.nextInt();
 		int n = scan.nextInt();
 		
 		int[] arr = new int[n];
@@ -25,28 +24,16 @@ public class exam39 {
 		for(int i =0; i<n; i++) {
 			arr[i] = scan.nextInt();
 		}
+	
+		String answer = "U";
+		Arrays.sort(arr);
 		
-		int[] cache = new int[s];
-		
-		for(int x : arr) {
-			int pos  = -1;
-			for(int i = 0; i<s; i++) if (x==cache[i]) pos=i;
-			if(pos == -1) {
-				for(int i = s-1; i>=1; i--) {
-					cache[i] = cache[i-1];
-				}
-				cache[0] = x;
-			}else {
-				for(int i = pos; i>=1; i--) {
-					cache[i] = cache[i-1];
-				}
-				cache[0] = x;
-			}
-			
+		for(int i = 0 ; i<arr.length-2; i++) {
+			if(arr[i] == arr[i+1]) answer="D";
 		}
 		
+		System.out.println(answer);
 		
-		System.out.println(Arrays.toString(cache));
 		
 	}
 	}	
