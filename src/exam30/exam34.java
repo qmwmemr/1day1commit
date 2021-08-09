@@ -1,15 +1,9 @@
 package exam30;
 
 
-import java.io.CharConversionException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class exam34 {
 	
@@ -39,10 +33,6 @@ public class exam34 {
 		if(!q.isEmpty()) answer = "NO";
 		
 		System.out.println(answer);
-		
-		
-		
-		
 		
 	}
 	}	
