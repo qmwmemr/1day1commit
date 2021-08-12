@@ -28,6 +28,8 @@ public class exam44 {
 			arr[i] = scan.nextInt();
 		}
 		
+		int answer = 0;
+		
 		System.out.println();
 		
 	}
