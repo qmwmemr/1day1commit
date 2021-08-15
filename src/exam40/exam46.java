@@ -25,7 +25,7 @@ public class exam46 {
 			arr[i] = scan.nextInt();
 		}
 	
-		
+		System.out.println();
 	}
 	}	
 
