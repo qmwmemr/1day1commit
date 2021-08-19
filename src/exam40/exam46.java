@@ -26,7 +26,6 @@ public class exam46 {
 		}
 	
 		System.out.println();
-		System.out.println();
 	}
 	}	
 
