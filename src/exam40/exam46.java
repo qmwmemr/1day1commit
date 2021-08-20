@@ -13,19 +13,23 @@ import java.util.Stack;
 
 public class exam46 {
 	
-	//재귀함수
+	public int DFS(int n) {
+		if(n == 1) return 1;
+		else {
+			return n*DFS(-1);
+		}
+	}
+	
+	
+	//재귀함수(팩토리얼)
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
 		int n = scan.nextInt();
 		
-		int[] arr = new int[n];
+		exam46 t = new exam46();
 		
-		for(int i =0; i<n; i++) {
-			arr[i] = scan.nextInt();
-		}
-	
-		System.out.println();
+		System.out.println(t.DFS(n));
 	}
 	}	
 
