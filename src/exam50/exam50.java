@@ -1,35 +1,53 @@
 package exam50;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Node{
+	int data;
+	Node lt,rt;
+	public Node(int val) {
+		data = val;
+		lt=rt=null;
+	}
+}
+
 public class exam50 {
 	
-	static int n;
-	static int[] ch;
-	
-	public void DFS(int L) {
-
-		if(L == n+1) {
-			String tmp = "";
-			for(int i =1; i<=n; i++) {
-				if(ch[i] == 1) tmp +=(i+" ");
+	Node root;
+	public void BFS(Node root) {
+		
+		Queue<Node> Q = new LinkedList<Node>();
+		Q.offer(root);
+		int L = 0;
+		while(!Q.isEmpty()) {
+			int len = Q.size();
+			System.out.print(L + " : ");
+			for(int i = 0; i<len;i++) {
+				Node cur = Q.poll();
+				System.out.print(cur.data+" ");
+				if(cur.lt!=null) Q.offer(cur.lt);
+				if(cur.rt!=null) Q.offer(cur.rt);
 			}
-			if(tmp.length()>0) System.out.println(tmp);
-		}else {
-			ch[L] = 1;
-			DFS(L+1);
-			ch[L] = 0;
-			DFS(L+1);
+			L++;
+			System.out.println();
 		}
 		
 	}
 	
-	//부분집합 구하기(DFS)
+	//이진트리 레벨탐색(BFS)
 	public static void main(String[] args) {
 		
-		exam50 t = new exam50();
-		n = 3;
-		ch = new int[n+1];
-		t.DFS(1);
-	
+		exam50 tree = new exam50();
+		tree.root = new Node(1);
+		tree.root.lt = new Node(2);
+		tree.root.rt = new Node(3);
+		tree.root.lt.lt = new Node(4);
+		tree.root.lt.rt = new Node(5);
+		tree.root.rt.lt = new Node(6);
+		tree.root.rt.rt = new Node(7);
+		tree.BFS(tree.root);
+		
 	
 	}
 	}	
