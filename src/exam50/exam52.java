@@ -38,7 +38,7 @@ public class exam52 {
 		return 0;
 	}
 	
-	//dfffedddd
+	//dff
 	public static void main(String[] args) {
 		
 		exam52 t = new exam52();
