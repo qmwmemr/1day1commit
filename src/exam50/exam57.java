@@ -25,7 +25,7 @@ public class exam57 {
 		}
 	}
 	
-	//합이 같은 부분집합
+	//합이 같은 부분 집합
 	public static void main(String[] args) {
 		
 		exam57 T = new exam57();
