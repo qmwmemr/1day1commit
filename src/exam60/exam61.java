@@ -30,7 +30,7 @@ public class exam61 {
 			}
 	}
 		}}
-	//순열구하기
+	//순열 구하기
 	public static void main(String[] args) {
 		
 		exam61 T = new exam61();
