@@ -30,7 +30,7 @@ public class exam62 {
 			}
 	}
 		}}
-	//수열 추측하기ㅇ
+	//조합 구하기
 	public static void main(String[] args) {
 		
 		exam62 T = new exam62();
