@@ -25,7 +25,7 @@ public class exam66 {
 	}
 	
 	
-	//피자배달거리(DFS) 
+	//피자배달거리(DFS) ㅋㅋ
 	public static void main(String[] args) {
 		
 		exam66 T = new exam66();
